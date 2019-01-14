@@ -1,0 +1,16 @@
+<div class=" container jumbotron text-center">
+  <h1 class="text-secondary">
+    This is Parent Component
+  </h1>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let menuItem of menuItems; let i = index">
+      {{menuItem.name}} : {{menuItem.qty}}
+      <button class="btn btn-success" (click)="increase(i)">+</button>
+    </li>
+
+    <li class="list-group-item" *ngFor="let i of item;">
+      {{i}}
+    </li>
+  </ul>
+</div>
+<app-chield [menuItems]="menuItems" (out)="getUpdatedMenuItem($event)"></app-chield>
