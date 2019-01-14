@@ -1,0 +1,11 @@
+<div class=" container jumbotron text-center">
+  <h1 class="text-secondary">
+    This is Chield Component
+  </h1>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let menuItem of menuItems; let i = index">
+      {{menuItem.name}} : {{menuItem.qty}}
+      <button class="btn btn-danger" (click)="decrease(i)">-</button>
+    </li>
+  </ul>
+</div>
